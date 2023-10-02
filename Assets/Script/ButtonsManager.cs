@@ -7,15 +7,15 @@ public class ButtonsManager : MonoBehaviour
 {
     public Image imageToScale;
     private bool isFlipVertical= false, isFadeDown = false;
-    public void Flip()
+    public void flip()
     {
-        imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
+        imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 2.0f, RotateMode.FastBeyond360);
         isFlipVertical = !isFlipVertical;
         if(!isFlipVertical)
         {
             do
             {
-                imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
+                imageToScale.transform.DORotate(new Vector3(0f, 360f, 0f), 2.0f, RotateMode.FastBeyond360);
             }
             while (isFlipVertical);
         }
@@ -39,6 +39,25 @@ public class ButtonsManager : MonoBehaviour
         }
     }
 
+    public void drop()
+    {
+
+    }
+
+    public void swingRight()
+    {
+
+    }
+
+    public void slideLeft()
+    {
+
+    }
+
+    public void flyDown()
+    {
+
+    }
 
 
 
