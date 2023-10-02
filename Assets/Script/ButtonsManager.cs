@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 public class ButtonsManager : MonoBehaviour
 {
     public Image imageToScale;
-    private bool isFlipped = false, isFadeDown = false;
+    private bool isFlipVertical= false, isFadeDown = false;
     public void Flip()
     {
-        isFlipped = true;
-        if (isFlipped == true )
+        imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
+        isFlipVertical = !isFlipVertical;
+        if(!isFlipVertical)
         {
-            imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
-        }
-        else
-        {
-            imageToScale.transform.DORotate(new Vector3(0f, -180f, 0f), 1.0f, RotateMode.FastBeyond360);
-            isFlipped = false;
+            do
+            {
+                imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
+            }
+            while (isFlipVertical);
         }
     }
 
