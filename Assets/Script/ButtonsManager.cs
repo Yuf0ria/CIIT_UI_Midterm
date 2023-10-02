@@ -9,15 +9,15 @@ public class ButtonsManager : MonoBehaviour
     private bool isFlipped = false, isFadeDown = false;
     public void Flip()
     {
-        imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
-        isFlipped = !isFlipped;
-        if (!isFlipped )
+        isFlipped = true;
+        if (isFlipped == true )
         {
-            do
-            {
-                imageToScale.transform.DORotate(new Vector3(0f, -180f, 0f), 1.0f, RotateMode.FastBeyond360);
-            }
-            while (isFlipped);
+            imageToScale.transform.DORotate(new Vector3(0f, 180f, 0f), 1.0f, RotateMode.FastBeyond360);
+        }
+        else
+        {
+            imageToScale.transform.DORotate(new Vector3(0f, -180f, 0f), 1.0f, RotateMode.FastBeyond360);
+            isFlipped = false;
         }
     }
 
