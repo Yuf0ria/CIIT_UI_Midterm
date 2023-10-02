@@ -19,14 +19,6 @@ public class ButtonsManager : MonoBehaviour
             }
             while (isFlipped);
         }
-        if (!isFlipped)
-        {
-            do
-            {
-                imageToScale.transform.DORotate(new Vector3(0f, -180f, 0f), 1.0f, RotateMode.FastBeyond360);
-            }
-            while (!isFlipped);
-        }
     }
 
     public void fadeDown()
