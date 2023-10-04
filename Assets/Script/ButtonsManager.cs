@@ -33,7 +33,7 @@ public class ButtonsManager : MonoBehaviour
         {
             do
             {
-                imageToScale.transform.DOLocalMoveY(392, 2f).SetEase(Ease.Linear);
+                imageToScale.transform.DOLocalMoveY(250, 2f).SetEase(Ease.Linear);
             }
             while (isFadeDown);
             
@@ -104,7 +104,7 @@ public class ButtonsManager : MonoBehaviour
         {
             do
             {
-                imageToScale.transform.DOLocalMoveY(392, 1f).SetEase(Ease.OutElastic);
+                imageToScale.transform.DOLocalMoveY(250, 1f).SetEase(Ease.OutElastic);
             }
             while (isFlyDown);
 
